@@ -2,7 +2,7 @@
     "manufacturer": "AkariiinTech",
     "keyboard_name": "AkaCube_HHKB",
     "maintainer": "AkariiinMKII",
-    "bootloader": "stm32duino",
+    "bootloader": "uf2boot",
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
@@ -12,23 +12,26 @@
         "mousekey": true,
         "nkro": true
     },
-    "matrix_pins": {
-        "cols": ["B3", "A15", "A10", "A9", "A8", "B15", "B14", "B13", "B12", "A2", "A1", "A0", "A3", "A4", "B1", "B10"],
-        "rows": ["B8", "B7", "B6", "B5", "B4", "B11"]
+    "bootmagic": {
+        "enabled": true,
+        "matrix": [0, 0]
     },
-    "indicators": {
-        "caps_lock": "B9",
-        "on_state": 0
+    "matrix_pins": {
+        "cols": ["B3", "A15", "A10", "A9", "A8", "B15", "B14", "B13", "B12", "A2", "A1", "A0", "A3", "A4"],
+        "rows": ["B8", "B7", "B6", "B5", "B4"]
     },
     "processor": "STM32F103",
     "url": "",
     "usb": {
-        "device_version": "1.0.0",
+        "device_version": "1.1.1",
         "pid": "0x3F54",
         "vid": "0x9C9E"
     },
+    "dynamic_keymap": {
+        "layer_count": 5
+    },
     "layouts": {
-        "LAYOUT_60_hhkb": {
+        "LAYOUT_hhkb": {
             "layout": [
                 {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
@@ -85,13 +88,13 @@
                 {"matrix": [3, 10], "x": 11.25, "y": 3},
                 {"matrix": [3, 11], "x": 12.25, "y": 3, "w": 1.75},
                 {"matrix": [3, 12], "x": 14, "y": 3},
-                {"matrix": [4, 1], "x": 1.5, "y": 4},
-                {"matrix": [4, 2], "x": 2.5, "y": 4, "w": 1.5},
-                {"matrix": [4, 7], "x": 4, "y": 4, "w": 7},
-                {"matrix": [4, 9], "x": 11, "y": 4, "w": 1.5},
-                {"matrix": [4, 10], "x": 12.5, "y": 4},
-                {"matrix": [5, 14], "x": 15, "y": 4},
-                {"matrix": [5, 15], "x": 16, "y": 4}
+                {"matrix": [4, 1], "x": 1.75, "y": 4},
+                {"matrix": [4, 2], "x": 2.75, "y": 4, "w": 1.5},
+                {"matrix": [4, 4], "x": 4.25, "y": 4, "w": 2.25},
+                {"matrix": [4, 7], "x": 6.5, "y": 4, "w": 1.75},
+                {"matrix": [4, 8], "x": 8.25, "y": 4, "w": 2.25},
+                {"matrix": [4, 9], "x": 10.5, "y": 4, "w": 1.5},
+                {"matrix": [4, 10], "x": 12, "y": 4}
             ]
         }
     }
